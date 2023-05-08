@@ -25,7 +25,7 @@
 }
 
 @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins-extrabold';
     src: url('../fonts/Poppins-ExtraBold.eot');
     src: url('../fonts/Poppins-ExtraBold.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Poppins-ExtraBold.woff2') format('woff2'),
@@ -64,7 +64,7 @@
 }
 
 @font-face {
-    font-family: 'Muli';
+    font-family: 'Muli-regular';
     src: url('../fonts/Muli-Regular.eot');
     src: url('../fonts/Muli-Regular.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Muli-Regular.woff2') format('woff2'),
@@ -77,7 +77,7 @@
 }
 
 @font-face {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat-bold';
     src: url('../fonts/Montserrat-Bold.eot');
     src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Montserrat-Bold.woff2') format('woff2'),
