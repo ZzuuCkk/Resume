@@ -535,6 +535,6 @@ a{
 
 .bullet-active{
     border: 1px solid red;
-    background-color: white;
+    /* background-color: white; */
 }
 
