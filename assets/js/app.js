@@ -1,8 +1,8 @@
-
 const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll(".slide");
 let setIntervalId = null;
 let activeIndex = 0;
+const sectionSelect = document.querySelector("#service-section");
 function renderSlides() {
 	slides.forEach((el, i) => {
 		if (i === activeIndex) {
@@ -58,3 +58,24 @@ window.addEventListener('scroll', function() {
       }
     }
   });
+
+
+
+  function renderService() {
+    const serviceFromJs = services.map((serv)=>{
+        return `
+            
+                <div class="card">
+                    <div class="imgContainer>
+                        <img src="${serv.icon}">
+                    </div>
+                    <h3>${serv.title}</h3>
+                    <p>${serv.description}</p>
+                </div>
+            
+        `
+
+    });
+    return serviceFromJs.join("");
+  }
+  sectionSelect.innerHTML = renderService();
