@@ -61,21 +61,92 @@ window.addEventListener('scroll', function() {
 
 
 
-  function renderService() {
-    const serviceFromJs = services.map((serv)=>{
-        return `
+//   function renderService() {
+//     const serviceFromJs = services.map((serv)=>{
+//         return `
             
-                <div class="card">
-                    <div class="imgContainer>
-                        <img src="${serv.icon}">
-                    </div>
-                    <h3>${serv.title}</h3>
-                    <p>${serv.description}</p>
-                </div>
+//                 <div class="card">
+//                     <div class="imgContainer>
+//                         <img src="${serv.icon}">
+//                     </div>
+//                     <h3>${serv.title}</h3>
+//                     <p>${serv.description}</p>
+//                 </div>
             
-        `
+//         `
 
+//     });
+//     return serviceFromJs.join("");
+//   }
+//   sectionSelect.innerHTML = renderService();
+
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    card.classList.add('hovered');
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.classList.remove('hovered');
+  });
+});
+function quoteSlider() {
+    const qSlide = document.querySelectorAll('.quote');
+    const qSlider = document.querySelector('.quotes');
+    const bullets = document.querySelectorAll('.bullet');
+    let activeIndex = 0;
+  
+    function nextQuote(direction) {
+      if (direction === "right") {
+        if (activeIndex === qSlide.length - 1) {
+          activeIndex = 0;
+        } else {
+          activeIndex++;
+        }
+      } else if (direction === "left") {
+        if (activeIndex === 0) {
+          activeIndex = qSlide.length - 1;
+        } else {
+          activeIndex--;
+        }
+      }
+      renderSlides();
+    }
+  
+    bullets.forEach((bullet, i) => {
+      bullet.addEventListener("click", () => {
+        activeIndex = i;
+        renderSlides();
+        bullets.forEach((bullet) => {
+          bullet.classList.remove("bullet-active");
+        });
+        bullet.classList.add("bullet-active");
+      });
+      if (i === activeIndex) {
+        bullet.classList.add("bullet-active");
+      } else {
+        bullet.classList.remove("bullet-active");
+      }
+      if (i === activeIndex) {
+        qSlide[i].classList.add("actives");
+      } else {
+        qSlide[i].classList.remove("actives");
+      }
     });
-    return serviceFromJs.join("");
+  
+    function renderSlides() {
+      qSlide.forEach((slide, i) => {
+        if (i === activeIndex) {
+          slide.classList.add("actives");
+        } else {
+          slide.classList.remove("actives");
+        }
+      });
+    }
+  
+    renderSlides();
   }
-  sectionSelect.innerHTML = renderService();
+  
+  quoteSlider();
