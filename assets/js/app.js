@@ -150,3 +150,33 @@ function quoteSlider() {
   }
   
   quoteSlider();
+
+  
+  const filterBtns = document.querySelectorAll('.filter-btn');
+const projects = document.querySelectorAll('.latest-projects-div');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Remove active class from all buttons
+    filterBtns.forEach(btn => btn.classList.remove('active'));
+    // Add active class to clicked button
+    btn.classList.add('active');
+    // Get filter value
+    const filter = btn.getAttribute('data-filter');
+    // Show projects that match filter
+    projects.forEach(project => {
+      if ( project.classList.contains(filter)) {
+        project.style.display = 'flex';
+        project.querySelector('.project-info').style.display = 'flex';
+      } else if(filter === 'all'){
+        project.style.display = 'flex';
+        project.querySelector('.project-info').style.display = 'none';
+      }else {
+        project.style.display = 'none';
+        project.querySelector('.project-info').style.display = 'none';
+      }
+      
+    });
+    
+  });
+});
