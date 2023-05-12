@@ -180,3 +180,53 @@ filterBtns.forEach(btn => {
     
   });
 });
+const clientsDesc = document.querySelectorAll('.clients-desc');
+
+clientsDesc.forEach((desc) => {
+  desc.addEventListener('mouseover', () => {
+    clientsDesc.classList.add('clients-active');
+    desc.querySelector('.clients-desc-title').style.display = 'flex';
+    desc.querySelector('.clients-desc-title').style.opacity = '1';
+    
+  });
+
+  desc.addEventListener('mouseleave', () => {
+    clientsDesc.classList.remove('clients-active');
+    desc.querySelector('.clients-desc-title').style.display = 'none';
+    desc.querySelector('.clients-desc-title').style.opacity = '0';
+    
+  });
+});
+
+
+const modal = document.querySelector("#success-modal");
+const form = document.querySelector("form");
+const openModal = document.querySelector(".submit-form");
+const closeModal = document.querySelector(".close-btn");
+
+function showModal(selector) {
+  const modal = document.querySelector(selector);
+  if (modal) {
+    const closeBtn = modal.querySelector(".close-btn");
+
+    modal.classList.add("active");
+    closeBtn.addEventListener("click", (e) => {
+      modal.classList.remove("active");
+    });
+    modal.addEventListener("click", (e) => {
+      if (e.target.classList.contains("modal")) {
+        modal.classList.remove("active");
+      }
+    });
+  }
+}
+
+openModal.addEventListener("click", (event) => {
+  event.preventDefault();
+  showModal("#success-modal");
+});
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  showModal("#success-modal");
+});
