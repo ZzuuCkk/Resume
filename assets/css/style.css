@@ -33,7 +33,7 @@ input:focus{
     /* padding: 0 20px; */
 
 }
-.logo img{
+.header-logo{
     width: 80px;
 }
 .logo-txt{
@@ -1042,7 +1042,7 @@ input:focus{
   gap: 20px;
 }
 
-.last-div-icons img{
+.last-div-icons>img{
   width: 32px;
 }
 
@@ -1063,7 +1063,7 @@ input:focus{
       padding: 20px;
 }
 
-.logo img{
+.header-logo{
   width: 80px;
 }
 .logo-txt{
