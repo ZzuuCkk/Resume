@@ -479,7 +479,7 @@ input:focus{
 
   /* quote section */
   .quotes{
-    background-image: url('../icons/clip.jpg');
+    background-image: url('../icons/clip.webp');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -876,7 +876,7 @@ input:focus{
     flex-direction: column;
   }
   .form-holder{
-    background-image: url('../icons/map.jpg');
+    background-image: url('../icons/map.webp');
     text-align: center;
     margin: 0px auto;
     max-width: 1920px;
