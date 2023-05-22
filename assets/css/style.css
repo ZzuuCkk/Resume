@@ -657,8 +657,9 @@ input:focus{
   
   .filter-btn.active {
     background-color: red;
+    
   }
-  
+
   .projects {
     max-width: 735px;
     width: 100%;
@@ -1377,7 +1378,8 @@ left: 30px;
 
 .slide .img {
   border-radius:  90px 0;
-  max-width: 850px;
+  max-width: 750px;
+  width: 100%;
   max-height: 650px;
 }
 .info{
@@ -1420,22 +1422,22 @@ left: 30px;
   gap:20px;
 }
 .more-text{
-  max-width: 540px;
+  max-width: 400px;
   margin: 0 20px 0 auto;
 }
 .txt-holder{
-  max-width: 540px;
+  max-width: 400px;
 }
 .more-title{
   font-size: 40px;
 }
 .more-img {
   margin: 0;
-  max-width: 540px;
+  max-width: 400px;
 }
 .more-img img{
   margin: 0 auto;
-  max-width: 540px;
+  max-width: 400px;
   max-height: 540px;
 }
 .skills-and-social{
@@ -1446,9 +1448,9 @@ left: 30px;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items:flex-start;
-  max-width: 440px;
+  max-width: 400px;
   width: 100%;
-  min-height: 400px;
+  min-height: 500px;
 }
 
 .skill-bar {
@@ -1567,9 +1569,9 @@ border-radius: 10px;
 
 
   .article-txt{
-    max-width: 800px;
+    max-width: 600px;
     width: 100%;
-    min-height: 590px;
+    min-height: 490px;
     height: 100%;
   }
   .article-txt img{
@@ -1588,17 +1590,17 @@ border-radius: 10px;
     color: #E93656;
   }
   .article-img{
-    max-width: 800px;
+    max-width: 600px;
     width: 100%;
-    min-height: 590px;
+    min-height: 490px;
     height: 100%
 
   }
   .article-img img{
  
-    max-width: 800px;
+    max-width: 600px;
     width: 100%;
-    min-height: 590px;
+    min-height: 490px;
     height: 100%;
     object-fit:cover;
   }
